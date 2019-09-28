@@ -8,17 +8,32 @@
 
 <body>
   <div class="container">
-    <em>
-        This is meant as a quick intro to how we will create front-end code for the rest of the semester.<br/>
-        The ONLY HTML-file you should consider is index.htm (in the public folder) and ALL your javascript code should go into the source folder.<br/>
-        Use this small example as a template for this week. Next time we will focus on JavaScript, it will be with React, i a way "similar" this<br/>
-        Make sure all your JavaScript code is included in index.js, the "by magic" it will be included in the bundle.js file which is included by the index.html
-    </em>
-    <br/>
-    <br/>
-    <h2>Jokes</h2>
-    <p id="jokes"> </p>
+    <input type="text" id="input">
+
+    <button id="getOneUser" class="btn btn-primary">Get One User By ID</button>
+
+    <button id="getAllData" class="btn btn-primary">Get All Persons</button>
   </div>
+
+  <div class="container">
+      Input info about Person. <br>
+      age
+      <input type="number" id="age"><br>
+      name
+      <input type="text" minlength="3" id="name"><br>
+      <label for="email">Email</label>
+      <input type="email" id="email"> <br>
+      <input type="radio" name="gender" value="male" checked> Male<br>
+      <input type="radio" name="gender" value="female"> Female<br>
+      <button id="postPerson" class="btn btn-primary">Post Person</button><br><br>
+      Only Fill this ID field if you wish to edit or delete. <br>
+      <input type="number" id="id"><br>
+      <br>
+      <button id="putPerson" class="btn btn-primary">Edit Person</button><button id="deletePerson" class="btn btn-primary">Delete Person</button>
+    </div>
+    <div id="content"> </div>
+  </div>
+  
   <script src="bundle.js"></script>
 </body>
 
