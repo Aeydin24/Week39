@@ -29,12 +29,21 @@ public static List<Person> people = new ArrayList();
 public static List<Integer> ID = new ArrayList();
 private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
+public PersonRessource() {
+        if (people.isEmpty()) {
+            person1.setId(1);
+            ID.add(1);
+            people.add(person1);
+            person2.setId(2);
+            ID.add(2);
+            people.add(person2);
+        }
+    }
 
+    @Path("all")
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     public String demo() {
-        people.add(person1);
-        people.add(person2);
         HashMap map;
         map = new HashMap();
         map.put("everybody", people);
