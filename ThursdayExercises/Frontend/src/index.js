@@ -36,12 +36,7 @@ var errorHandlingFetch = function (URL, callback) {
         });
 }
 
-/**
- * POST PUT DELETE Requests. Help function
- * @param String URL 
- * @param String method - POST PUT DELETE  
- * @param Person body 
- */
+
 function request(URL, method, body) {
     function makeOptions(method, body) {
         var opts = {
@@ -58,10 +53,7 @@ function request(URL, method, body) {
     return fetch(URL, makeOptions(method, body));
 }
 
-/**
- * Homemade Table Helper function for all users. 
- * @param data 
- */
+
 function makeTable(data) {
     var tableData = data.all.map(person => "<tr><td>" + person.ID + "</td><td>" + person.name + "</td></tr>");
     tableData.unshift('<table class="table"><tr><th scope="col">id</th><th scope="col">name</th></tr>');
@@ -69,10 +61,7 @@ function makeTable(data) {
     return tableData.join("");
 }
 
-/**
- * Home Helper function for 1 person. 
- * @param data 
- */
+
 function getOneUserTable(data) {
     var tableData = ["<tr><td>" + data.id + "</td><td>" + data.age + "</td><td>" + data.name + "</td><td>" + data.gender + "</td><td>" + data.email + "</td></tr>"];
     tableData.unshift('<table class="table"><tr><th scope="col">id</th><th scope="col">age</th><th scope="col">name</th><th scope="col">gender</th><th scope="col">email</th></tr>');
